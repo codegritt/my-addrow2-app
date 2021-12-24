@@ -64,4 +64,31 @@ deleteEmployee(row:any){
     alert("Employee deleted")
   })
 }
+onEdit(row:any){
+this.employeeModelObj.id =row.id;
+   
+  this.formValue.controls['id'].setValue(row.id);
+  this.formValue.controls['firstName'].setValue(row.firstName);
+  this.formValue.controls['lastName'].setValue(row.lastName);
+  this.formValue.controls['email'].setValue(row.email);
+}
+updateEmployeeDetails(){
+  this.employeeModelObj.id = this.formValue.value.id;
+  this.employeeModelObj.firstName = this.formValue.value.firstName;
+  this.employeeModelObj.lastName = this.formValue.value.lastName;
+  this.employeeModelObj.email = this.formValue.value.email; 
+
+  this.api.updateEmployee(this.employeeModelObj,this.employeeModelObj.id)
+  .subscribe((res: any)=>{
+    alert("Updated successfully");
+    let ref = document.getElementById('cancel')
+ref?.click();
+
+
+        this.formValue.reset();
+        this.getAllEmployee();
+
+  })
+
+}
 }
