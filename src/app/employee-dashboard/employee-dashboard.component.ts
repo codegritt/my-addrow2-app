@@ -51,7 +51,7 @@ ref?.click();
 
 getAllEmployee(){
   this.api.getEmployee()
-  .subscribe(res=>{
+  .subscribe((res: any)=>{
 this.employeeData=res;
   })
 }
