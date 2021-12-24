@@ -28,7 +28,7 @@
             <td>{{row.email}}</td>
 
             <td>
-                <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-warning">Edit</button>
+                <button (click)="onEdit(row)" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-warning">Edit</button>
                 <button (click)="deleteEmployee(row)" class="btn btn-danger mx-3">Delete</button>
             </td>
 
@@ -119,6 +119,7 @@
             <div class="modal-footer">
                 <button type="button" id="cancel" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 <button type="button" (click)="postEmployeeDetails()" class="btn btn-primary">Add</button>
+                <button type="button" (click)="updateEmployeeDetails()" class="btn btn-primary">Update</button>
             </div>
         </div>
     </div>
