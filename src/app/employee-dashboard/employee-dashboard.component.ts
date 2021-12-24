@@ -57,4 +57,11 @@ this.employeeData=res;
   })
 }
 
+
+deleteEmployee(row:any){
+  this.api.deleteEmployee(row.id)
+  .subscribe((res: any)=>{
+    alert("Employee deleted")
+  })
+}
 }
