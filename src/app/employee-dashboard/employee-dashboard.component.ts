@@ -35,11 +35,12 @@ export class EmployeeDashboardComponent implements OnInit {
       .subscribe((res: any) => {
         console.log(res);
         alert("Employee added successfully")
+        this.formValue.reset();
       },
-        (err: any) => {
+        (        err: any) => {
           alert("Something went wrong")
         })
-
+      
   }
 
 }
