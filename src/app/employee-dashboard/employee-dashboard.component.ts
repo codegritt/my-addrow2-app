@@ -12,6 +12,7 @@ export class EmployeeDashboardComponent implements OnInit {
   formValue !: FormGroup;
   employeeModelObj: EmployeeModel = new EmployeeModel();
   api: any;
+  employeeData!: any;
 
   constructor(private formbuilder: FormBuilder) { }
 
@@ -47,5 +48,12 @@ ref?.click();
         })
       
   }
+
+getAllEmployee(){
+  this.api.getEmployee()
+  .subscribe(res=>{
+this.employeeData=res;
+  })
+}
 
 }
