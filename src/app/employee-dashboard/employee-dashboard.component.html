@@ -21,6 +21,18 @@
         </tr>
     </thead>
     <tbody>
+        <tr *ngFor="let row of employeeData">
+            <td>{{row.id}}</td>
+            <td>{{row.firstName}}</td>
+            <td>{{row.lastName}}</td>
+            <td>{{row.email}}</td>
+
+            <td>
+                <button class="btn btn-warning">Edit</button>
+                <button class="btn btn-danger mx-3">Delete</button>
+            </td>
+
+        </tr>
         <tr>
             <td>1</td>
             <td>Sebastian</td>
