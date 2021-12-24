@@ -23,7 +23,7 @@ export class EmployeeDashboardComponent implements OnInit {
       last_name: [''],
       email: ['']
     })
-
+this.getAllEmployee();
   }
 
   postEmployeeDetails() {
@@ -42,6 +42,7 @@ ref?.click();
 
 
         this.formValue.reset();
+        this.getAllEmployee();
       },
         (        err: any) => {
           alert("Something went wrong")
