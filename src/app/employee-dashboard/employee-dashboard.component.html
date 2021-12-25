@@ -81,35 +81,33 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Employee Information</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+                
             </div>
             <div class="modal-body">
                 <form [formGroup]="formValue">
 
                     <div class="form-group">
-                        <label for="exampleInputPassword1">ID</label>
-                        <input type="number" formControlName="Id" class="form-control" id="exampleInputPassword1"
+                        <label class="form-label">ID</label>
+                        <input type="number" formControlName="Id" class="form-control"
                             placeholder="Enter Id">
                     </div>
 
 
                     <div class="form-group">
-                        <label for="exampleInputEmail1">First Name</label>
-                        <input type="text" formControlName="first_name" class="form-control" id="exampleInputEmail1"
-                            aria-describedby="emailHelp" placeholder="Enter first_name">
+                        <label class="form-label">First Name</label>
+                        <input type="text" formControlName="firstName" class="form-control"
+                           placeholder="Enter firstName">
 
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Last Name</label>
-                        <input type="text" formControlName="last_name" class="form-control" id="exampleInputPassword1"
-                            placeholder="Enter last_name">
+                        <label class="form-label">Last Name</label>
+                        <input type="text" formControlName="lastName" class="form-control" 
+                            placeholder="Enter lastName">
                     </div>
 
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Email</label>
-                        <input type="text" formControlName="email" class="form-control" id="exampleInputPassword1"
+                        <label class="form-label">Email</label>
+                        <input type="text" formControlName="email" class="form-control" 
                             placeholder="Enter email">
                     </div>
 
