@@ -19,8 +19,8 @@ export class EmployeeDashboardComponent implements OnInit {
   ngOnInit(): void {
     this.formValue = this.formbuilder.group({
       Id: [''],
-      first_name: [''],
-      last_name: [''],
+      firstName: [''],
+      lastName: [''],
       email: ['']
     })
     this.getAllEmployee();
